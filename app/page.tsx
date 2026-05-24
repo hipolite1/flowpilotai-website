@@ -1,21 +1,70 @@
+"use client";
+
 export default function FlowPilotLandingPage() {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      business: formData.get("business"),
+      service: formData.get("service"),
+      industry: formData.get("industry"),
+    };
+
+    try {
+      const response = await fetch(
+        "https://hook.us2.make.com/x3d63hx9wdcb603ta4cnyt2kz3sgctlv",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (response.ok) {
+        alert("Request submitted successfully!");
+        form.reset();
+      } else {
+        alert("Submission failed.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong.");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white text-gray-900">
+
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
           <div>
-            <h1 className="text-2xl font-bold">FlowPilot AI</h1>
-            <p className="text-sm text-gray-500">Automate. Respond. Grow.</p>
+            <h1 className="text-4xl font-bold">FlowPilot AI</h1>
+            <p className="text-gray-500 text-sm">
+              Automate. Respond. Grow.
+            </p>
           </div>
 
-          <div className="hidden md:flex gap-8 text-gray-700 font-medium">
+          <div className="hidden md:flex gap-10 text-lg font-medium">
             <a href="#services" className="hover:text-blue-600 transition">
               Services
             </a>
+
             <a href="#contact" className="hover:text-blue-600 transition">
               Contact
             </a>
+
             <a href="#pricing" className="hover:text-blue-600 transition">
               Pricing
             </a>
@@ -26,14 +75,16 @@ export default function FlowPilotLandingPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 py-20 px-6 text-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
           <div>
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
               AI Automation That Helps Local Businesses Capture More Leads
             </h1>
 
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              FlowPilot AI helps businesses automate lead capture, instant SMS alerts,
-              customer follow-ups, appointment reminders, and CRM workflows.
+              FlowPilot AI helps businesses automate lead capture,
+              instant SMS alerts, customer follow-ups,
+              appointment reminders, and CRM workflows.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -46,7 +97,7 @@ export default function FlowPilotLandingPage() {
 
               <a
                 href="#services"
-                className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-2xl text-lg font-semibold transition"
+                className="border border-blue-500 text-blue-100 hover:bg-blue-900 px-8 py-4 rounded-2xl text-lg font-semibold transition"
               >
                 View Services
               </a>
@@ -55,203 +106,122 @@ export default function FlowPilotLandingPage() {
 
           <div className="bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl p-8 border border-blue-800">
             <div className="space-y-5">
-              <div className="p-4 bg-green-50 rounded-2xl border border-green-100">
+
+              <div className="p-4 bg-green-50 rounded-2xl border border-green-100 text-black">
                 <h3 className="font-bold text-lg">Lead Captured</h3>
                 <p className="text-gray-600">
                   New customer inquiry submitted online.
                 </p>
               </div>
 
-              <div className="p-4 bg-blue-50 rounded-2xl border border-blue-100">
+              <div className="p-4 bg-blue-50 rounded-2xl border border-blue-100 text-black">
                 <h3 className="font-bold text-lg">Instant SMS Alert</h3>
                 <p className="text-gray-600">
                   Business owner receives immediate notification.
                 </p>
               </div>
 
-              <div className="p-4 bg-purple-50 rounded-2xl border border-purple-100">
-                <h3 className="font-bold text-lg">Automated Follow-Up</h3>
+              <div className="p-4 bg-purple-50 rounded-2xl border border-purple-100 text-black">
+                <h3 className="font-bold text-lg">
+                  Automated Follow-Up
+                </h3>
+
                 <p className="text-gray-600">
                   Customer receives instant confirmation email and SMS.
                 </p>
               </div>
+
             </div>
           </div>
+
         </div>
       </section>
 
       {/* Services */}
-      <section id="services" className="py-20 px-6 bg-gray-50">
+      <section id="services" className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-4">Services</h2>
-            <p className="text-gray-600 text-lg">
-              Automation systems built for service businesses.
+
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold mb-4">
+              Automation Services
+            </h2>
+
+            <p className="text-gray-600 text-xl">
+              Built for local businesses ready to grow faster.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Lead Automation",
-                text: "Capture leads instantly from forms, websites, and landing pages.",
-              },
-              {
-                title: "SMS Notifications",
-                text: "Receive instant SMS alerts whenever a new lead comes in.",
-              },
-              {
-                title: "AI Follow-Ups",
-                text: "Automatically respond to customers and nurture leads.",
-              },
-              {
-                title: "Appointment Reminders",
-                text: "Reduce no-shows using automated reminders and confirmations.",
-              },
-              {
-                title: "CRM Integration",
-                text: "Organize customer data into Google Sheets and CRM workflows.",
-              },
-              {
-                title: "Custom Automation",
-                text: "Tailored automations for your industry and business operations.",
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition"
-              >
-                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Industries */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-12">Industries We Help</h2>
+            <div className="p-8 rounded-3xl shadow-xl border">
+              <h3 className="text-2xl font-bold mb-4">
+                Lead Follow-Up Automation
+              </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              "HVAC",
-              "Roofing",
-              "Cleaning Services",
-              "Plumbing",
-              "Logistics",
-              "Construction",
-              "Trucking",
-              "Contractors",
-            ].map((industry, idx) => (
-              <div
-                key={idx}
-                className="bg-blue-50 py-6 rounded-2xl font-semibold text-lg"
-              >
-                {industry}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <p className="text-gray-600">
+                Automatically respond to leads instantly by SMS and email.
+              </p>
+            </div>
 
-      {/* How it works */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-4">How It Works</h2>
-            <p className="text-gray-600 text-lg">
-              Simple automation built for business growth.
-            </p>
-          </div>
+            <div className="p-8 rounded-3xl shadow-xl border">
+              <h3 className="text-2xl font-bold mb-4">
+                Appointment Reminder System
+              </h3>
 
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              "Customer submits a lead form",
-              "Lead instantly enters your CRM",
-              "You receive email and SMS alerts",
-              "Customer receives automated follow-up",
-            ].map((step, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-8 rounded-3xl shadow-md text-center"
-              >
-                <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold">
-                  {idx + 1}
-                </div>
+              <p className="text-gray-600">
+                Reduce no-shows with automated reminders.
+              </p>
+            </div>
 
-                <p className="text-gray-700 leading-relaxed">{step}</p>
-              </div>
-            ))}
+            <div className="p-8 rounded-3xl shadow-xl border">
+              <h3 className="text-2xl font-bold mb-4">
+                CRM Workflow Automation
+              </h3>
+
+              <p className="text-gray-600">
+                Organize leads, customers, and tasks automatically.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-4">Simple Pricing</h2>
+      <section id="pricing" className="py-20 px-6 bg-gray-50">
+        <div className="max-w-5xl mx-auto text-center">
 
-            <p className="text-gray-600 text-lg">
-              Flexible automation packages for growing businesses.
+          <h2 className="text-5xl font-bold mb-4">
+            Simple Pricing
+          </h2>
+
+          <p className="text-gray-600 text-xl mb-12">
+            Affordable automation solutions for local businesses.
+          </p>
+
+          <div className="bg-white rounded-3xl shadow-2xl p-12 border">
+            <h3 className="text-4xl font-bold mb-4">
+              Starter Automation Package
+            </h3>
+
+            <p className="text-6xl font-bold text-blue-600 mb-6">
+              $297
             </p>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Starter",
-                price: "$297",
-                features: [
-                  "Lead Forms",
-                  "Email Notifications",
-                  "Google Sheets CRM",
-                ],
-              },
-              {
-                name: "Growth",
-                price: "$697",
-                features: [
-                  "SMS Notifications",
-                  "Automated Follow-Ups",
-                  "Appointment Reminders",
-                ],
-              },
-              {
-                name: "Pro Automation",
-                price: "$1500+",
-                features: [
-                  "AI Automation",
-                  "Custom Workflows",
-                  "Business Process Automation",
-                ],
-              },
-            ].map((plan, idx) => (
-              <div
-                key={idx}
-                className="border border-gray-200 rounded-3xl p-8 shadow-md hover:shadow-xl transition"
-              >
-                <h3 className="text-3xl font-bold mb-4">{plan.name}</h3>
+            <ul className="space-y-4 text-lg text-gray-700 mb-10">
+              <li>✔ Lead Capture Automation</li>
+              <li>✔ SMS Notifications</li>
+              <li>✔ Email Follow-Ups</li>
+              <li>✔ CRM Integration</li>
+            </ul>
 
-                <p className="text-5xl font-bold text-blue-600 mb-8">
-                  {plan.price}
-                </p>
+            <a
+              href="#contact"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl text-xl font-bold transition"
+            >
+              Get Started
+            </a>
 
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="text-gray-700">
-                      ✓ {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-semibold transition">
-                  Get Started
-                </button>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -259,6 +229,7 @@ export default function FlowPilotLandingPage() {
       {/* Contact */}
       <section id="contact" className="py-20 px-6 bg-blue-50">
         <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl p-10">
+
           <div className="text-center mb-10">
             <h2 className="text-4xl font-bold mb-4">
               Get Your Business Automated
@@ -269,51 +240,101 @@ export default function FlowPilotLandingPage() {
             </p>
           </div>
 
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
+
             <div className="grid md:grid-cols-2 gap-6">
+
               <input
                 type="text"
+                name="name"
                 placeholder="Full Name"
+                required
                 className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-blue-500"
               />
 
               <input
                 type="text"
+                name="business"
                 placeholder="Business Name"
+                required
                 className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-blue-500"
               />
+
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
+
               <input
                 type="email"
+                name="email"
                 placeholder="Email Address"
+                required
                 className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-blue-500"
               />
 
               <input
                 type="tel"
+                name="phone"
                 placeholder="Phone Number"
+                required
                 className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-blue-500"
               />
+
             </div>
 
-            <select className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-blue-500">
-              <option>Select Service Needed</option>
-              <option>SMS Campaigns</option>
-              <option>Appointment Reminders</option>
-              <option>Lead Follow-Up</option>
-              <option>AI Chatbot</option>
+            <select
+              name="service"
+              required
+              className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">Select a Service</option>
+
+              <option value="Lead Follow-Up Automation">
+                Lead Follow-Up Automation
+              </option>
+
+              <option value="Missed Call Text-Back">
+                Missed Call Text-Back
+              </option>
+
+              <option value="Appointment Reminder System">
+                Appointment Reminder System
+              </option>
+
+              <option value="AI Customer Communication">
+                AI Customer Communication
+              </option>
+
+              <option value="Google Review Request Automation">
+                Google Review Request Automation
+              </option>
+
+              <option value="CRM Workflow Automation">
+                CRM Workflow Automation
+              </option>
+
+              <option value="Custom Automation Setup">
+                Custom Automation Setup
+              </option>
             </select>
 
-            <select className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-blue-500">
-              <option>Select Business Type</option>
-              <option>HVAC</option>
-              <option>Roofing</option>
-              <option>Cleaning Services</option>
-              <option>Plumbing</option>
-              <option>Logistics</option>
-              <option>Construction</option>
+            <select
+              name="industry"
+              required
+              className="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="">Select Business Type</option>
+
+              <option value="HVAC">HVAC</option>
+              <option value="Roofing">Roofing</option>
+              <option value="Cleaning Services">
+                Cleaning Services
+              </option>
+              <option value="Plumbing">Plumbing</option>
+              <option value="Logistics">Logistics</option>
+              <option value="Construction">Construction</option>
+              <option value="Trucking">Trucking</option>
+              <option value="Contractors">Contractors</option>
             </select>
 
             <button
@@ -322,26 +343,11 @@ export default function FlowPilotLandingPage() {
             >
               Submit Request
             </button>
+
           </form>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-950 text-white py-10 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div>
-            <h3 className="text-2xl font-bold">FlowPilot AI</h3>
-
-            <p className="text-gray-400 mt-2">
-              AI automation systems for modern businesses.
-            </p>
-          </div>
-
-          <div className="text-gray-400 text-sm">
-            © 2026 FlowPilot AI. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
