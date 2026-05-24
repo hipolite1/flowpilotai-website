@@ -6,10 +6,9 @@ export default function FlowPilotLandingPage() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
             <img
-              src="/logo.png"
+              src="/logo2s.png"
               alt="FlowPilot AI Logo"
               className="w-14 h-14 rounded-full shadow-md"
-              
             />
             <div>
               <h1 className="text-2xl font-bold">FlowPilot AI</h1>
