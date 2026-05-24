@@ -9,6 +9,7 @@ export default function FlowPilotLandingPage() {
               src="/logo.png"
               alt="FlowPilot AI Logo"
               className="w-14 h-14 rounded-full shadow-md"
+              
             />
             <div>
               <h1 className="text-2xl font-bold">FlowPilot AI</h1>
