@@ -4,39 +4,33 @@ export default function FlowPilotLandingPage() {
       {/* Navbar */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <img
-              src="/logo.png"
-              alt="FlowPilot AI Logo"
-              className="w-14 h-14 rounded-full shadow-md"
-            />
-            <div>
-              <h1 className="text-2xl font-bold">FlowPilot AI</h1>
-              <p className="text-sm text-gray-500">Automate. Respond. Grow.</p>
-            </div>
+          <div>
+            <h1 className="text-2xl font-bold">FlowPilot AI</h1>
+            <p className="text-sm text-gray-500">Automate. Respond. Grow.</p>
           </div>
 
           <div className="hidden md:flex gap-8 text-gray-700 font-medium">
-            <a href="#services" className="hover:text-blue-600 transition">Services</a>
-            <a href="#contact" className="hover:text-blue-600 transition">Contact</a>
-            <a href="#pricing" className="hover:text-blue-600 transition">Pricing</a>
+            <a href="#services" className="hover:text-blue-600 transition">
+              Services
+            </a>
+            <a href="#contact" className="hover:text-blue-600 transition">
+              Contact
+            </a>
+            <a href="#pricing" className="hover:text-blue-600 transition">
+              Pricing
+            </a>
           </div>
         </div>
       </nav>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 py-20 px-6 text-white">
-        <div className="absolute inset-0 opacity-20 bg-cover bg-center" style={{ backgroundImage: "url('/banner.png')" }} />
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <img
-              src="/banner.png"
-              alt="FlowPilot AI Banner"
-              className="w-full rounded-3xl shadow-2xl border border-blue-900 mb-10"
-            />
-
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
               AI Automation That Helps Local Businesses Capture More Leads
             </h1>
+
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
               FlowPilot AI helps businesses automate lead capture, instant SMS alerts,
               customer follow-ups, appointment reminders, and CRM workflows.
@@ -63,17 +57,23 @@ export default function FlowPilotLandingPage() {
             <div className="space-y-5">
               <div className="p-4 bg-green-50 rounded-2xl border border-green-100">
                 <h3 className="font-bold text-lg">Lead Captured</h3>
-                <p className="text-gray-600">New customer inquiry submitted online.</p>
+                <p className="text-gray-600">
+                  New customer inquiry submitted online.
+                </p>
               </div>
 
               <div className="p-4 bg-blue-50 rounded-2xl border border-blue-100">
                 <h3 className="font-bold text-lg">Instant SMS Alert</h3>
-                <p className="text-gray-600">Business owner receives immediate notification.</p>
+                <p className="text-gray-600">
+                  Business owner receives immediate notification.
+                </p>
               </div>
 
               <div className="p-4 bg-purple-50 rounded-2xl border border-purple-100">
                 <h3 className="font-bold text-lg">Automated Follow-Up</h3>
-                <p className="text-gray-600">Customer receives instant confirmation email and SMS.</p>
+                <p className="text-gray-600">
+                  Customer receives instant confirmation email and SMS.
+                </p>
               </div>
             </div>
           </div>
@@ -180,6 +180,7 @@ export default function FlowPilotLandingPage() {
                 <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold">
                   {idx + 1}
                 </div>
+
                 <p className="text-gray-700 leading-relaxed">{step}</p>
               </div>
             ))}
@@ -188,10 +189,11 @@ export default function FlowPilotLandingPage() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 px-6 bg-white">
+      <section id="pricing" className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-bold mb-4">Simple Pricing</h2>
+
             <p className="text-gray-600 text-lg">
               Flexible automation packages for growing businesses.
             </p>
@@ -232,7 +234,10 @@ export default function FlowPilotLandingPage() {
                 className="border border-gray-200 rounded-3xl p-8 shadow-md hover:shadow-xl transition"
               >
                 <h3 className="text-3xl font-bold mb-4">{plan.name}</h3>
-                <p className="text-5xl font-bold text-blue-600 mb-8">{plan.price}</p>
+
+                <p className="text-5xl font-bold text-blue-600 mb-8">
+                  {plan.price}
+                </p>
 
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, i) => (
@@ -251,11 +256,14 @@ export default function FlowPilotLandingPage() {
         </div>
       </section>
 
-      {/* Contact Form */}
+      {/* Contact */}
       <section id="contact" className="py-20 px-6 bg-blue-50">
         <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl p-10">
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-bold mb-4">Get Your Business Automated</h2>
+            <h2 className="text-4xl font-bold mb-4">
+              Get Your Business Automated
+            </h2>
+
             <p className="text-gray-600 text-lg">
               Fill out the form below and FlowPilot AI will contact you.
             </p>
@@ -322,14 +330,8 @@ export default function FlowPilotLandingPage() {
       <footer className="bg-slate-950 text-white py-10 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
-            <div className="flex items-center gap-4 mb-3">
-              <img
-                src="/logo.png"
-                alt="FlowPilot AI Logo"
-                className="w-14 h-14 rounded-full"
-              />
-              <h3 className="text-2xl font-bold">FlowPilot AI</h3>
-            </div>
+            <h3 className="text-2xl font-bold">FlowPilot AI</h3>
+
             <p className="text-gray-400 mt-2">
               AI automation systems for modern businesses.
             </p>
