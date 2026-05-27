@@ -551,88 +551,102 @@ export default function FlowPilotLandingPage() {
         </div>
       </section>
       {/* Footer */}
-<footer className="bg-slate-950 text-white py-14 px-6 border-t border-blue-900">
+<footer className="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white py-16 px-6 border-t border-blue-900">
 
-  <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
 
     {/* Brand */}
     <div>
-      <h2 className="text-3xl font-bold mb-3">
+
+      <h2 className="text-3xl font-bold mb-4">
         FlowPilot AI
       </h2>
 
-      <p className="text-blue-200 leading-relaxed">
-        AI automation solutions designed to help local businesses
-        capture more leads, automate follow-ups,
+      <p className="text-blue-200 leading-relaxed text-lg">
+        AI-powered automation systems designed to help businesses
+        capture more leads, automate customer communication,
         and respond faster.
       </p>
+
     </div>
 
-  {/* Quick Links */}
-<div>
-  <h3 className="text-xl font-semibold mb-4">
-    Quick Links
-  </h3>
+    {/* Quick Links */}
+    <div>
 
-  <div className="flex flex-col gap-3 text-blue-200">
+      <h3 className="text-xl font-semibold mb-5">
+        Quick Links
+      </h3>
 
-    <a href="#services" className="hover:text-cyan-400 transition">
-      Services
-    </a>
+      <div className="flex flex-col gap-4 text-blue-200">
 
-    <a href="#pricing" className="hover:text-cyan-400 transition">
-      Pricing
-    </a>
+        <a href="#services" className="hover:text-cyan-400 transition">
+          Services
+        </a>
 
-    <a href="#contact" className="hover:text-cyan-400 transition">
-      Contact
-    </a>
+        <a href="#pricing" className="hover:text-cyan-400 transition">
+          Pricing
+        </a>
 
-    <a
-      href="/privacy-policy"
-      className="hover:text-cyan-400 transition"
-    >
-      Privacy Policy
-    </a>
+        <a href="#contact" className="hover:text-cyan-400 transition">
+          Contact
+        </a>
 
-    <a
-      href="/terms-of-service"
-      className="hover:text-cyan-400 transition"
-    >
-      Terms of Service
-    </a>
+        <a
+          href="/privacy-policy"
+          className="hover:text-cyan-400 transition"
+        >
+          Privacy Policy
+        </a>
+
+        <a
+          href="/terms-of-service"
+          className="hover:text-cyan-400 transition"
+        >
+          Terms of Service
+        </a>
+
+      </div>
+
+    </div>
+
+    {/* Contact */}
+    <div>
+
+      <h3 className="text-xl font-semibold mb-5">
+        Contact
+      </h3>
+
+      <div className="space-y-4 text-blue-200">
+
+        <p>
+          info@flowpilotai.com
+        </p>
+
+        <p>
+          (289) 277-6031
+        </p>
+
+        <p>
+          4000 Steeles Avenue West
+        </p>
+
+        <p>
+          Woodbridge, ON L4L 4V9
+        </p>
+
+        <p>
+          Serving Canadian & U.S. Businesses
+        </p>
+
+      </div>
+
+    </div>
 
   </div>
-</div>
 
-{/* Contact */}
-<div>
-  <h3 className="text-xl font-semibold mb-4">
-    Contact
-  </h3>
-
-  <div className="space-y-3 text-blue-200">
-
-    <p>
-      info@flowpilotai.com
-    </p>
-
-    <p>
-      AI-Powered Business Automation
-    </p>
-
-    <p>
-      Built For Local Businesses
-    </p>
-
+  <div className="border-t border-blue-900 mt-14 pt-6 text-center text-blue-300 text-sm">
+    © 2026 FlowPilot AI. All rights reserved.
   </div>
-</div>
-
-</div>
-
-<div className="border-t border-blue-900 mt-12 pt-6 text-center text-blue-300 text-sm">
-  © 2026 FlowPilot AI. All rights reserved.
-</div>
 
 </footer>
 
