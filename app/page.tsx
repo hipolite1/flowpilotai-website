@@ -46,6 +46,11 @@ export default function FlowPilotLandingPage() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
 
+    {/* Top Bar */}
+<div className="bg-slate-950 text-blue-200 text-sm text-center py-2 border-b border-blue-900">
+  Serving Canadian & U.S. Businesses
+</div>
+
       {/* Navbar */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
@@ -644,9 +649,17 @@ export default function FlowPilotLandingPage() {
 
   </div>
 
-  <div className="border-t border-blue-900 mt-14 pt-6 text-center text-blue-300 text-sm">
+  <div className="border-t border-blue-900 mt-14 pt-6 text-center text-blue-300 text-sm space-y-2">
+
+  <p>
     © 2026 FlowPilot AI. All rights reserved.
-  </div>
+  </p>
+
+  <p className="text-blue-400 text-xs">
+    FlowPilot AI is a subsidiary of Quenex Canada Inc, a 2004 Ontario Corporation.
+  </p>
+
+</div>
 
 </footer>
 
