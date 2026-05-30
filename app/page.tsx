@@ -313,83 +313,211 @@ export default function FlowPilotLandingPage() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-20 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto text-center">
+<section id="pricing" className="py-24 px-6 bg-gray-50">
+  <div className="max-w-7xl mx-auto text-center">
 
-          <h2 className="text-5xl font-bold mb-4">
-            Simple Pricing
-          </h2>
+    <h2 className="text-5xl md:text-6xl font-bold mb-6 text-slate-900">
+      Automation Packages Built For Growth
+    </h2>
 
-          <p className="text-gray-600 text-xl mb-12">
-            Affordable automation solutions for local businesses.
-          </p>
+    <p className="text-gray-600 text-xl mb-16 max-w-3xl mx-auto">
+      Choose the automation system that fits your business today,
+      then scale as your lead response, customer follow-up, and workflow needs grow.
+    </p>
 
-          <div className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white rounded-[40px] shadow-2xl p-12 border border-blue-800 overflow-hidden">
+    <div className="grid lg:grid-cols-3 gap-8 items-stretch">
 
-  <div className="absolute top-0 right-0 bg-blue-600 text-white px-5 py-2 rounded-bl-2xl text-sm font-bold tracking-wide">
-    MOST POPULAR
-  </div>
+      {/* Starter */}
+      <div className="bg-white rounded-[32px] shadow-xl border border-gray-200 p-10 flex flex-col">
 
-  <h3 className="text-5xl font-bold mb-4">
-    FlowPilot AI Starter System
-  </h3>
+        <h3 className="text-3xl font-bold mb-3 text-slate-900">
+          Starter System
+        </h3>
 
-  <p className="text-blue-100 text-xl mb-8 max-w-2xl mx-auto">
-    Perfect for local businesses that want faster lead response,
-    automated customer follow-ups, and more booked customers.
-  </p>
+        <p className="text-gray-600 mb-8">
+          Perfect for small businesses that need lead capture, SMS alerts, and basic automation.
+        </p>
 
-  <p className="text-7xl font-extrabold text-cyan-400 mb-4">
-    $297
-  </p>
+        <p className="text-6xl font-extrabold text-cyan-500 mb-2">
+          $297
+        </p>
 
-  <p className="text-blue-200 mb-10 text-lg">
-    One-Time Setup • No Monthly Contract
-  </p>
+        <p className="text-gray-500 mb-10">
+          One-Time Setup
+        </p>
 
-  <div className="grid md:grid-cols-2 gap-5 text-left max-w-3xl mx-auto mb-12">
+        <div className="space-y-4 text-left mb-10 flex-grow">
 
-    <div className="bg-white/10 rounded-2xl p-5 border border-blue-800">
-      ✓ Lead Capture Automation
-    </div>
+          <div className="bg-gray-50 rounded-2xl p-4 border">
+            ✓ Lead Capture Automation
+          </div>
 
-    <div className="bg-white/10 rounded-2xl p-5 border border-blue-800">
-      ✓ Instant SMS Notifications
-    </div>
+          <div className="bg-gray-50 rounded-2xl p-4 border">
+            ✓ Instant SMS Notifications
+          </div>
 
-    <div className="bg-white/10 rounded-2xl p-5 border border-blue-800">
-      ✓ Automated Email Responses
-    </div>
+          <div className="bg-gray-50 rounded-2xl p-4 border">
+            ✓ Automated Email Responses
+          </div>
 
-    <div className="bg-white/10 rounded-2xl p-5 border border-blue-800">
-      ✓ Google Sheets CRM Integration
-    </div>
+          <div className="bg-gray-50 rounded-2xl p-4 border">
+            ✓ Google Sheets CRM
+          </div>
 
-    <div className="bg-white/10 rounded-2xl p-5 border border-blue-800">
-      ✓ 24/7 Lead Capture
-    </div>
+          <div className="bg-gray-50 rounded-2xl p-4 border">
+            ✓ Calendly Booking Integration
+          </div>
 
-    <div className="bg-white/10 rounded-2xl p-5 border border-blue-800">
-      ✓ Twilio SMS Alerts
-    </div>
-
-  </div>
-
-  <a
-  href="https://calendly.com/lite0012/30min"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 hover:shadow-cyan-500/30 shadow-2xl text-white px-12 py-5 rounded-2xl text-xl font-bold transition-all duration-300"
->
-  Book Free Consultation
-</a>
-  <p className="text-blue-200 text-sm mt-8">
-    Built for local businesses that want faster lead response and more conversions.
-  </p>
-
-</div>
         </div>
-      </section>
+
+        <a
+          href="https://buy.stripe.com/28E7sMfbW45FaF6bJxg360a"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-auto inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 shadow-xl"
+        >
+          Secure Your Setup
+        </a>
+
+      </div>
+
+      {/* Growth */}
+      <div className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white rounded-[36px] shadow-2xl border border-blue-800 p-10 flex flex-col lg:scale-105">
+
+        <div className="absolute top-0 right-0 bg-cyan-500 text-slate-900 px-5 py-2 rounded-bl-2xl text-sm font-bold tracking-wide">
+          MOST POPULAR
+        </div>
+
+        <h3 className="text-3xl font-bold mb-3">
+          Growth Automation
+        </h3>
+
+        <p className="text-blue-100 mb-8">
+          Built for businesses that want stronger follow-up, voicemail automation, and better lead handling.
+        </p>
+
+        <p className="text-6xl font-extrabold text-cyan-400 mb-2">
+          $997
+        </p>
+
+        <p className="text-blue-200 mb-10">
+          Advanced Automation Package
+        </p>
+
+        <div className="space-y-4 text-left mb-10 flex-grow">
+
+          <div className="bg-white/10 rounded-2xl p-4 border border-blue-800">
+            ✓ Everything In Starter
+          </div>
+
+          <div className="bg-white/10 rounded-2xl p-4 border border-blue-800">
+            ✓ Voicemail Automation
+          </div>
+
+          <div className="bg-white/10 rounded-2xl p-4 border border-blue-800">
+            ✓ Missed-Call Text Back
+          </div>
+
+          <div className="bg-white/10 rounded-2xl p-4 border border-blue-800">
+            ✓ Automated Follow-Up Sequences
+          </div>
+
+          <div className="bg-white/10 rounded-2xl p-4 border border-blue-800">
+            ✓ Lead Nurturing Workflows
+          </div>
+
+          <div className="bg-white/10 rounded-2xl p-4 border border-blue-800">
+            ✓ Multi-Step Automation Flows
+          </div>
+
+        </div>
+
+        <a
+          href="https://buy.stripe.com/28EaEYfbW31B5kM14Tg360b"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-auto inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 shadow-2xl"
+        >
+          Secure Your Setup
+        </a>
+
+      </div>
+
+      {/* Premium */}
+      <div className="bg-white rounded-[32px] shadow-xl border border-gray-200 p-10 flex flex-col">
+
+        <h3 className="text-3xl font-bold mb-3 text-slate-900">
+          Premium Business System
+        </h3>
+
+        <p className="text-gray-600 mb-8">
+          Complete automation infrastructure for businesses ready to scale operations and customer communication.
+        </p>
+
+        <p className="text-6xl font-extrabold text-blue-600 mb-2">
+          $2,497
+        </p>
+
+        <p className="text-gray-500 mb-10">
+          Full Business Automation System
+        </p>
+
+        <div className="space-y-4 text-left mb-10 flex-grow">
+
+          <div className="bg-gray-50 rounded-2xl p-4 border">
+            ✓ Everything In Growth
+          </div>
+
+          <div className="bg-gray-50 rounded-2xl p-4 border">
+            ✓ Stripe Payment Integration
+          </div>
+
+          <div className="bg-gray-50 rounded-2xl p-4 border">
+            ✓ CRM Dashboard Setup
+          </div>
+
+          <div className="bg-gray-50 rounded-2xl p-4 border">
+            ✓ Advanced AI Workflows
+          </div>
+
+          <div className="bg-gray-50 rounded-2xl p-4 border">
+            ✓ Analytics & Reporting
+          </div>
+
+          <div className="bg-gray-50 rounded-2xl p-4 border">
+            ✓ Priority Automation Support
+          </div>
+
+        </div>
+
+        <div className="flex flex-col gap-4 mt-auto">
+
+          <a
+            href="https://calendly.com/lite0012/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white border border-gray-300 hover:bg-gray-100 text-slate-900 px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 shadow-xl"
+          >
+            Book Strategy Call
+          </a>
+
+          <a
+            href="https://buy.stripe.com/bJe5kEgg0by7eVmdRFg360c"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-gradient-to-r from-blue-600 to-slate-900 hover:scale-105 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 shadow-xl"
+          >
+            Secure Your Setup
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* CTA Section */}
 <section className="py-24 px-6 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white">
