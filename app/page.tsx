@@ -64,9 +64,8 @@ export default function FlowPilotLandingPage() {
 
   <div>
     <h1 className="text-4xl font-bold text-slate-900">
-      FlowPilot AI
+    FlowPilot<span className="text-cyan-500">e</span> AI
     </h1>
-
     <p className="text-gray-500">
       Automate. Respond. Grow.
     </p>
@@ -691,8 +690,8 @@ export default function FlowPilotLandingPage() {
     {/* Brand */}
     <div>
 
-      <h2 className="text-3xl font-bold mb-4">
-        FlowPilot AI
+      <h2 className="text-3xl font-bold mb-3">
+      FlowPilot<span className="text-cyan-400">e</span> AI
       </h2>
 
       <p className="text-blue-200 leading-relaxed text-lg">
