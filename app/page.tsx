@@ -752,7 +752,7 @@ export default function FlowPilotLandingPage() {
       <div className="space-y-4 text-blue-200">
 
         <p>
-          info@flowpilotai.com
+          support@flowpilote-ai.com
         </p>
 
         <p>
