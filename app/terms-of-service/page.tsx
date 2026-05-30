@@ -11,7 +11,7 @@ export default function TermsOfServicePage() {
         <div className="space-y-8 text-lg leading-relaxed text-gray-700">
 
           <p>
-            By accessing or using the FlowPilot AI website and services,
+            By accessing or using the FlowPilote AI website and services,
             you agree to the following Terms of Service.
           </p>
 
@@ -21,7 +21,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p>
-              FlowPilot AI provides business automation services,
+              e AI provides business automation services,
               workflow integrations, lead capture systems,
               customer communication automation,
               and related digital solutions.
@@ -46,7 +46,7 @@ export default function TermsOfServicePage() {
 
             <p>
               While we strive to provide reliable automation solutions,
-              FlowPilot AI does not guarantee specific business results,
+              FlowPilote AI does not guarantee specific business results,
               lead conversions, or uninterrupted service availability.
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p>
-              FlowPilot AI shall not be held liable for any indirect,
+              FlowPilote AI shall not be held liable for any indirect,
               incidental, or consequential damages arising from
               the use of our services or website.
             </p>
@@ -82,7 +82,7 @@ export default function TermsOfServicePage() {
 
             <p>
               For questions regarding these Terms of Service,
-              please contact FlowPilot AI.
+              please contact FlowPilote AI.
             </p>
           </div>
 

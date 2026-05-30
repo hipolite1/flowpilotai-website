@@ -58,13 +58,13 @@ export default function FlowPilotLandingPage() {
 
   <img
     src="/logo.png"
-    alt="FlowPilot AI Logo"
+    alt="FlowPilote AI Logo"
     className="w-16 h-16 rounded-2xl shadow-lg"
   />
 
   <div>
     <h1 className="text-4xl font-bold text-slate-900">
-    FlowPilot<span className="text-cyan-500">e</span> AI
+    FlowPilote<span className="text-cyan-500">e</span> AI
     </h1>
     <p className="text-gray-500">
       Automate. Respond. Grow.
@@ -106,7 +106,7 @@ export default function FlowPilotLandingPage() {
       </h1>
 
       <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl">
-        FlowPilot AI automates lead capture, instant SMS alerts,
+        FlowPilote AI automates lead capture, instant SMS alerts,
         customer follow-ups, appointment reminders, and AI-powered
         business workflows — so you never lose another lead.
       </p>
@@ -207,7 +207,7 @@ export default function FlowPilotLandingPage() {
       </h2>
 
       <p className="text-gray-600 text-xl max-w-3xl mx-auto">
-        FlowPilot AI automates lead capture, customer follow-ups,
+        FlowPilote AI automates lead capture, customer follow-ups,
         appointment reminders, and business workflows —
         so you never lose another lead.
       </p>
@@ -528,7 +528,7 @@ export default function FlowPilotLandingPage() {
     </h2>
 
     <p className="text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto mb-10">
-      FlowPilot AI helps local businesses automate lead capture,
+      FlowPilote AI helps local businesses automate lead capture,
       instant SMS notifications, customer follow-ups,
       appointment reminders, and business workflows —
       so you never miss another opportunity.
@@ -571,7 +571,7 @@ export default function FlowPilotLandingPage() {
             </h2>
 
             <p className="text-gray-600 text-lg">
-              Fill out the form below and FlowPilot AI will contact you.
+              Fill out the form below and FlowPilote AI will contact you.
             </p>
           </div>
 
@@ -691,7 +691,7 @@ export default function FlowPilotLandingPage() {
     <div>
 
       <h2 className="text-3xl font-bold mb-3">
-      FlowPilot<span className="text-cyan-400">e</span> AI
+      FlowPilote<span className="text-cyan-400">e</span> AI
       </h2>
 
       <p className="text-blue-200 leading-relaxed text-lg">
@@ -779,11 +779,11 @@ export default function FlowPilotLandingPage() {
   <div className="border-t border-blue-900 mt-14 pt-6 text-center text-blue-300 text-sm space-y-2">
 
   <p>
-    © 2026 FlowPilot AI. All rights reserved.
+    © 2026 FlowPilote AI. All rights reserved.
   </p>
 
   <p className="text-blue-400 text-xs">
-    FlowPilot AI is a subsidiary of Quenex Canada Inc, a 2004 Ontario Corporation.
+    FlowPilote AI is a subsidiary of Quenex Canada Inc, a 2004 Ontario Corporation.
   </p>
 
 </div>
